@@ -17,19 +17,19 @@ Test Automation Framework using selenium, Pytest and Python with the below featu
 Created 2 test cases as part of this framework.
 
 Test1: Search iphone14 in flipkart search box and fetch the price
-Steps:
-    1. Launch "https://www.flipkart.com/" URL
-    2. Enter user input ("iphone 14") in search box
-    3. Validate user desired iphone is present at page
-    4. Validate the price of iphone
+**Steps:**
+1. Launch "https://www.flipkart.com/" URL
+2. Enter user input ("iphone 14") in search box
+3. Validate user desired iphone is present at page
+4. Validate the price of iphone
 
 Test2:  Search Samsung Mobile in flipkart and add to cart and validate price 
-Steps:
-    1. Launch "https://www.flipkart.com/" URL
-    2. Enter samsung user input ("Samsung S24 ultra") in search box
-    3. Click on Samsung S24 ultra mobile, it redirects to next tab.
-    4. click on add to cart option
-    5. Validate card value is same as mobile value
+**Steps:**
+1. Launch "https://www.flipkart.com/" URL
+2. Enter samsung user input ("Samsung S24 ultra") in search box
+3. Click on Samsung S24 ultra mobile, it redirects to next tab.
+4. click on add to cart option
+5. Validate card value is same as mobile value
 
 # Test Execution
 
