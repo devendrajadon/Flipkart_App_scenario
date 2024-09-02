@@ -1,54 +1,52 @@
-# Python-Selenium-Pytest
+# Python-Test-Automation-Framework 
 
-For Windows:
-* Install scoop from www.scoop.sh
-* Install allure commandline by running the following command:
-```
-scoop install allure
-```
+# Description
 
-* git clone
-* cd to project directory
-```
-py -m pip install --user virtualenv
-```
-* Create a virtual environment: 
-```
-py -m venv testenv
-```
-* Activate your virtual environment:
-```
-.\testenv\Scripts\activate
-```
-* install pip:
-```
-pip install pipenv
-```
-* install project dependencies using pipenv: 
-```
-pipenv install
-```
-## Setup work environment using IDE PyCharm
-* download code as zip file from [Git](https://github.com/cvenkatreddy/Python-Selenium-Pytest/)
-* Extract and open with Pycharm
-* venv and dependencies will automatically setup and installed with notified pop-ups
-* pip install allure, if get allure not found
+Test Automation Framework using selenium, Pytest and Python with the below features:
 
-## Run Tests
+- Framework is based on page object model.
+- Locator Management: All locators are centralized in the Pages/Locators.py file for easy maintenance.
+- Allure Reporting: Generates detailed, visually appealing test reports.
 
-```
-pipenv run pytest --alluredir=allure-results --browser <firefox/remote/chrome_headless>
-```
-if no browser was selected then chrome will be used.
 
-* Run according to tags:
+# Install dependences
+
+- Install the depended packages in `requirements.txt` using `pip3 install -r requirements.txt`
+
+#  test Scenarios
+Created 2 test cases as part of this framework.
+
+Test1: Search iphone14 in flipkart search box and fetch the price
+Steps:
+    1. Launch "" URL
+    2. Enter user input ("iphone 14") in search box
+    3. Validate user desired iphone is present at page
+    4. Validate the price of iphone
+
+Test2:  Search Samsung Mobile () in flipkart and add to cart and validate price 
+Steps:
+    1. Launch "" URL
+    2. Enter samsung user input ("Samsung S24 ultra") in search box
+    3. Click on Samsung S24 ultra mobile, it redirects to next tab.
+    4. click on add to cart option
+    5. Validate card value is same as mobile value
+
+# Test Execution
+
+Test will run with chrome and edge browser.  
+
+To execute the test cases, use the following command:
 ```
-pipenv run pytest -k "<tag_name>" --browser <firefox/chrome/remote/chrome_headless>
+pytest --alluredir=Reports
 ```
 
-## View Test Results
+You can then generate and view the Allure report with:
+``` 
+allure serve Reports
+```
 
-* view allure results: 
+For parallel execution use below commands:
+``` 
+pytest -n 4 --alluredir=Results
 ```
-allure serve allure-results
-```
+
